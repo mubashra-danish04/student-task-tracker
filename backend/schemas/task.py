@@ -7,13 +7,13 @@ class TaskBase(BaseModel):
     description:str
     status:str
     due_date:datetime
-    created_at:datetime
-    updated_by:datetime
+    created_time:datetime
+    updated_time:datetime
 
 class TaskCreate(TaskBase):
     pass
 
-class Task(UserBase):
+class Task(TaskBase):
     id:int 
     
     model_config = {
