@@ -2,7 +2,7 @@ from database.db import get_db
 from services import task as task_service
 from schemas import task as task_schema
 from database import models
-
+from fastapi import HTTPException
 def create_task(db:Session,task:task_schema.TaskCreate):
     exist=db.query(models.Task).filter(models.Task.title==task.title).first()
     if exist:
