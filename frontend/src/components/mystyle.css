@@ -3,7 +3,7 @@
   max-width: 500px;
   margin: 40px auto;
   padding: 30px;
-  background-color: #b09898;
+  background-color: #846161;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
@@ -13,7 +13,7 @@
 .create-task-container h1 {
   text-align: center;
   margin-bottom: 25px;
-  color: #333;
+  color: #5e3535;
   font-size: 28px;
 }
 
@@ -28,6 +28,7 @@
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 16px;
+  background-color: rgb(60, 20, 10);
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -49,7 +50,7 @@
 .create-task-container button {
   width: 100%;
   padding: 12px;
-  background-color: #007BFF;
+  background-color: #500d0d;
   color: #fff;
   font-size: 18px;
   border: none;
@@ -72,9 +73,98 @@
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 6px;
-  color: #721c24;
+  color: #cf7c85;
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;
   font-size: 14px;
   text-align: center;
 }
+
+
+
+/* mystyle.css */
+
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Task list styling */
+ul {
+  list-style-type: none; /* remove bullets */
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 15px;
+  color: black;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+li button:hover {
+  opacity: 0.8;
+}
+
+button {
+  background-color: #8dde5b;
+  color: rgb(28, 19, 19);
+  font-size: medium;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Filter modal styling */
+.box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #eba3a3;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+  text-align: center;
+}
+
+.box select {
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: 1px solid #862e2e;
+  font-size: 1rem;
+}
+
+.box button {
+  margin: 5px;
+}
+
+button + button {
+  margin-left: 10px;
+}
+

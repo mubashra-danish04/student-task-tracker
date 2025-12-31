@@ -4,7 +4,15 @@ from services import task as task_service
 from schemas import task as task_schema
 from typing import Annotated
 from sqlalchemy.orm import Session
+from database import models
 router = APIRouter(prefix="/task",tags=["Task"])
+
+
+@router.get("/sorted")
+def sorted_task(db:Session=Depends(get_db)):
+    task=db.query(models.Task).order_by(models.Task.title.asc()).all()
+    return task
+
 
 @router.post("/create")
 def create_task(task: task_schema.TaskCreate, db: Session = Depends(get_db)):
@@ -27,3 +35,6 @@ def update_task(id:int,task:task_schema.TaskCreate,db:Session=Depends(get_db)):
 @router.delete("/{id}")
 def delete_task(id:int,db:Session=Depends(get_db)):
     return task_service.delete_task(id,db)
+
+
+
